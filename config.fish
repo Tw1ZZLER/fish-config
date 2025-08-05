@@ -8,6 +8,7 @@ set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT 1
 set -x SHELL /usr/bin/fish
 set -x EDITOR /usr/bin/nvim
+set -x VISUAL nvim
 
 # Use bat for man pages
 set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
