@@ -1,7 +1,3 @@
-# Fix stupid bug
-set -e LD_PRELOAD
-clear
-
 ## Set values
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
@@ -48,11 +44,11 @@ end
 
 ## Starship prompt
 if status --is-interactive
-    source ("/usr/bin/starship" init fish --print-full-init | psub)
+    source ("starship" init fish --print-full-init | psub)
 end
 
 ## Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.fish
+# source /usr/share/doc/find-the-command/ftc.fish
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -162,14 +158,6 @@ alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacma
 alias mirrora 'sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 alias mirrord 'sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
 alias mirrors 'sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
-
-# Help people new to Arch
-alias apt 'man pacman'
-alias apt-get 'man pacman'
-alias please sudo
-alias tb 'nc termbin.com 9999'
-alias helpme 'echo "To print basic information about a command use tldr <command>"'
-alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
 
 # Get the error messages from journalctl
 alias jctl 'journalctl -p 3 -xb'
