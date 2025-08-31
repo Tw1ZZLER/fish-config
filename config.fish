@@ -2,8 +2,8 @@
 # Hide welcome message & ensure we are reporting fish as shell
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT 1
-set -x SHELL /usr/bin/fish
 set -x EDITOR /usr/bin/nvim
+set -x SHELL /home/tw1zzler/.nix-profile/bin/fish
 set -x VISUAL nvim
 
 # Use bat for man pages
